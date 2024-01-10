@@ -1,38 +1,32 @@
-# Discord Bot Website Template (landing page only)
+# Nameless : Discord Bot Website
 
-Here there is only a landing page, not complete like a dashboard, or other pages.
-
-You can change every word in the html file (change the text and your bot name in index.html)
-
-You can also use this landing page for other purposes, such as a personal portfolio and so on.
+Notre objectif est simple : fournir une solution complète en un seul bot, éliminant la nécessité d'inviter de nombreux bots spécialisés. NamelessBot est conçu pour être le compagnon ultime de votre serveur Discord, offrant une gamme diversifiée de fonctionnalités
 
 > [**PREVIEW**](#preview)
 
 # Installation
-just clone or download or fork the repo and open index.html
+
+Il suffit de cloner ou télécharger ou forker le repo et d'ouvrir index.html
 
 ```cli
-git clone https://github.com/JastinXyz/discord-bot-landing-page-web
+git clone https://github.com/NameLess-Bot/NameLessWebsite.git
 ```
 
-Replace all required text in index.html
+# Technologies utilisé
 
-# Built with
-- [Bulma](https://bulma.io) - the modern CSS framework that just works.
-- [JQUERY](https://jquery.com) - a fast, small, and feature-rich JavaScript library.
-- [AOS](https://michalsnik.github.io/aos/) - Animate On Scroll Library
-- [Tippy.js](https://atomiks.github.io/tippyjs/) - complete tooltip, popover, dropdown, and menu solution for the web, powered by [Popper](https://popper.js.org/).
-- [Fontawesome Icon](https://fontawesome.com) - icon library and toolkit.
+- [Bulma](https://bulma.io) - le framework CSS moderne qui fonctionne.
+- [AOS](https://michalsnik.github.io/aos/) - Animation sur le scroll
+- [Tippy.js](https://atomiks.github.io/tippyjs/) - solution complète d'infobulles, de popovers, de dropdown et de menus pour le web, alimentée par [Popper](https://popper.js.org/).
+- [Fontawesome Icon](https://fontawesome.com) - bibliothèque d'icônes et boîte à outils.
 
 # Preview
 
 ![img](/ss/screenshoot-full.png)
 
-# Live Demo
+# Site web
 
-https://jastinxyz.github.io/discord-bot-landing-page-web
+https://nameless-bot.github.io/NameLessWebsite/
 
 <hr/>
 <div align="center">
-Feel free to report bugs in the issue tab or open pull request.
-</div>
+N'hésitez pas à signaler des bugs dans l'onglet "Issue" ou à ouvrir une "pull request".</div>
