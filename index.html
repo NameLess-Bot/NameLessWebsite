@@ -239,7 +239,8 @@
     <!-- single feature end (Right) -->
   </section>
   <!-- Features Section End -->
- <!-- Commandes Section Start -->
+
+<!-- Commandes Section Start -->
 <section id="commands" class="section mt-6">
   <div class="has-text-centered">
     <h1 class="title lined">Commandes (<span id="total-commands">0</span>)</h1>
@@ -284,15 +285,6 @@
           <li><strong>/invitation</strong> - Créer un lien d'invitation pour le serveur.</li>
         </ul>
 
-        <!-- Commandes de Musique -->
-        <h2 class="subtitle">Commandes de Musique (<span id="music-commands-count">0</span>)</h2>
-        <ul id="music-commands-list">
-          <li><strong>/play [titre]</strong> - Jouer de la musique.</li>
-          <li><strong>/skip</strong> - Passer la chanson en cours.</li>
-          <li><strong>/stop</strong> - Arrêter la musique.</li>
-          <li><strong>/queue</strong> - Afficher la file d'attente de musique.</li>
-        </ul>
-
         <!-- Commandes Diverses -->
         <h2 class="subtitle">Commandes Diverses (<span id="div-commands-count">0</span>)</h2>
         <ul id="div-commands-list">
@@ -329,57 +321,34 @@
 </section>
 <!-- Commandes Section End -->
 
-<script>
-  function updateCommandCounts() {
-    // Get command lists
-    const modCommands = document.querySelectorAll('#mod-commands-list li').length;
-    const utilCommands = document.querySelectorAll('#util-commands-list li').length;
-    const musicCommands = document.querySelectorAll('#music-commands-list li').length;
-    const divCommands = document.querySelectorAll('#div-commands-list li').length;
-    const testCommands = document.querySelectorAll('#test-commands-list li').length;
-
-    // Calculate total commands
-    const totalCommands = modCommands + utilCommands + musicCommands + divCommands + testCommands;
-
-    // Update the counts in the HTML
-    document.getElementById('mod-commands-count').textContent = modCommands;
-    document.getElementById('util-commands-count').textContent = utilCommands;
-    document.getElementById('music-commands-count').textContent = musicCommands;
-    document.getElementById('div-commands-count').textContent = divCommands;
-    document.getElementById('test-commands-count').textContent = testCommands;
-    document.getElementById('total-commands').textContent = totalCommands;
-  }
-
-  // Call the function to update counts
-  updateCommandCounts();
-</script>
 
 
-  <!-- Stats Section Start -->
-  <section id="stats" class="section mt-6">
-    <div class="has-text-centered">
-      <h1 class="title lined">Stats</h1>
-      <div class="line line-center blurple"></div>
+<!-- Stats Section Start -->
+<section id="stats" class="section mt-6">
+  <div class="has-text-centered">
+    <h1 class="title lined">Stats</h1>
+    <div class="line line-center blurple"></div>
+  </div>
+
+  <div class="columns mt-6">
+    <div class="column has-text-centered">
+      <p class="title has-text-weight-bold lined">2</p>
+      <span class="subtitle has-text-weight-bold blurple"><i class="fa-solid fa-server"></i> Serveurs</span>
     </div>
 
-    <div class="columns mt-6">
-      <div class="column has-text-centered">
-        <p class="title has-text-weight-bold lined">2</p>
-        <span class="subtitle has-text-weight-bold blurple"><i class="fa-solid fa-server"></i> Serveurs</span>
-      </div>
-
-      <div class="column has-text-centered">
-        <p class="title has-text-weight-bold lined">+30</p>
-        <span class="subtitle has-text-weight-bold blurple"><i class="fa-solid fa-terminal"></i> Commandes</span>
-      </div>
-
-      <div class="column has-text-centered">
-        <p class="title has-text-weight-bold lined">12</p>
-        <span class="subtitle has-text-weight-bold blurple"><i class="fa-solid fa-users"></i> Utilisateurs</span>
-      </div>
+    <div class="column has-text-centered">
+      <p class="title has-text-weight-bold lined" id="stats-commands-count">0</p>
+      <span class="subtitle has-text-weight-bold blurple"><i class="fa-solid fa-terminal"></i> Commandes</span>
     </div>
-  </section>
-  <!-- Stats Section End -->
+
+    <div class="column has-text-centered">
+      <p class="title has-text-weight-bold lined">12</p>
+      <span class="subtitle has-text-weight-bold blurple"><i class="fa-solid fa-users"></i> Utilisateurs</span>
+    </div>
+  </div>
+</section>
+<!-- Stats Section End -->
+
 
   <!-- Invite Section Start -->
   <section class="section mt-6">
@@ -433,6 +402,35 @@
   <script src="https://unpkg.com/@popperjs/core@2"></script>
   <script src="https://unpkg.com/tippy.js@6"></script>
   <script src="assets/js/script.js"></script>
+
+  <script>
+    function updateCommandCounts() {
+      // Get command lists
+      const modCommands = document.querySelectorAll('#mod-commands-list li').length;
+      const utilCommands = document.querySelectorAll('#util-commands-list li').length;
+      const divCommands = document.querySelectorAll('#div-commands-list li').length;
+      const testCommands = document.querySelectorAll('#test-commands-list li').length;
+  
+      // Calculate total commands
+      const totalCommands = modCommands + utilCommands + divCommands + testCommands;
+  
+      // Update the counts in the HTML
+      document.getElementById('mod-commands-count').textContent = modCommands;
+      document.getElementById('util-commands-count').textContent = utilCommands;
+      document.getElementById('div-commands-count').textContent = divCommands;
+      document.getElementById('test-commands-count').textContent = testCommands;
+      document.getElementById('total-commands').textContent = totalCommands;
+  
+      // Update the stats section
+      document.getElementById('stats-commands-count').textContent = totalCommands;
+    }
+  
+    // Call the function to update counts
+    updateCommandCounts();
+  </script>
+  
+
+
 </body>
 
 </html>
