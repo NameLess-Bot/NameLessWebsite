@@ -1,8 +1,3 @@
-<!--
-  | Website designed by JstnLT (https://jstnlt.my.id)
-  | This project is open source: https://github.com/JastinXyz/discord-bot-landing-page-web
--->
-
 <!DOCTYPE html>
 <html>
 
@@ -244,6 +239,121 @@
     <!-- single feature end (Right) -->
   </section>
   <!-- Features Section End -->
+ <!-- Commandes Section Start -->
+<section id="commands" class="section mt-6">
+  <div class="has-text-centered">
+    <h1 class="title lined">Commandes (<span id="total-commands">0</span>)</h1>
+    <div class="line line-center blurple"></div>
+  </div>
+
+  <div class="columns mt-6">
+    <div class="column is-8 is-offset-2">
+      <div class="content">
+
+        <!-- Commandes de Modération -->
+        <h2 class="subtitle">Commandes de Modération (<span id="mod-commands-count">0</span>)</h2>
+        <ul id="mod-commands-list">
+          <li><strong>/ban [utilisateur]</strong> - Bannir un utilisateur du serveur.</li>
+          <li><strong>/kick [utilisateur]</strong> - Expulser un utilisateur du serveur.</li>
+          <li><strong>/mute [utilisateur]</strong> - Mettre un utilisateur en sourdine.</li>
+          <li><strong>/unmute [utilisateur]</strong> - Retirer la sourdine d'un utilisateur.</li>
+          <li><strong>/clear [nombre]</strong> - Effacer un certain nombre de messages dans un canal.</li>
+          <li><strong>/role [utilisateur] [rôle]</strong> - Attribuer un rôle à un utilisateur.</li>
+          <li><strong>/avertir [utilisateur]</strong> - Envoyer un avertissement à un utilisateur.</li>
+          <li><strong>/infosmodération</strong> - Obtenir des détails sur les activités de modération.</li>
+          <li><strong>/infospermissions</strong> - Afficher des informations sur les permissions des rôles et utilisateurs.</li>
+          <li><strong>/définirpermissions [utilisateur/role]</strong> - Gérer les permissions des utilisateurs ou rôles.</li>
+          <li><strong>/slowmode [temps]</strong> - Activer le mode lent sur un canal.</li>
+        </ul>
+
+        <!-- Commandes Utilitaires -->
+        <h2 class="subtitle">Commandes Utilitaires (<span id="util-commands-count">0</span>)</h2>
+        <ul id="util-commands-list">
+          <li><strong>/aide</strong> - Affiche la liste des commandes disponibles.</li>
+          <li><strong>/userinfo [utilisateur]</strong> - Afficher les informations sur un utilisateur.</li>
+          <li><strong>/serverinfo</strong> - Afficher les informations sur le serveur.</li>
+          <li><strong>/translate [langue] [texte]</strong> - Traduire du texte dans une autre langue.</li>
+          <li><strong>/poll [question]</strong> - Créer un sondage.</li>
+          <li><strong>/météo [ville]</strong> - Recevoir des mises à jour météorologiques en temps réel.</li>
+          <li><strong>/heuremonde</strong> - Afficher l'heure actuelle dans différentes villes du monde.</li>
+          <li><strong>/crypto [monnaie]</strong> - Consulter les prix actuels des principales cryptomonnaies.</li>
+          <li><strong>/gitsearch [dépôt]</strong> - Rechercher des dépôts GitHub depuis Discord.</li>
+          <li><strong>/devise [montant] [devise de départ] [devise de destination]</strong> - Convertir des montants d'une monnaie à une autre.</li>
+          <li><strong>/motdepasse</strong> - Générer un mot de passe aléatoire.</li>
+          <li><strong>/définition [mot]</strong> - Donner la définition d'un mot.</li>
+          <li><strong>/invitation</strong> - Créer un lien d'invitation pour le serveur.</li>
+        </ul>
+
+        <!-- Commandes de Musique -->
+        <h2 class="subtitle">Commandes de Musique (<span id="music-commands-count">0</span>)</h2>
+        <ul id="music-commands-list">
+          <li><strong>/play [titre]</strong> - Jouer de la musique.</li>
+          <li><strong>/skip</strong> - Passer la chanson en cours.</li>
+          <li><strong>/stop</strong> - Arrêter la musique.</li>
+          <li><strong>/queue</strong> - Afficher la file d'attente de musique.</li>
+        </ul>
+
+        <!-- Commandes Diverses -->
+        <h2 class="subtitle">Commandes Diverses (<span id="div-commands-count">0</span>)</h2>
+        <ul id="div-commands-list">
+          <li><strong>/meme</strong> - Afficher un meme aléatoire.</li>
+          <li><strong>/game [nom du jeu]</strong> - Lancer un mini-jeu.</li>
+          <li><strong>/bataille</strong> - Jouer à un jeu de cartes Bataille.</li>
+          <li><strong>/blackjack</strong> - Participer à des parties de Blackjack.</li>
+          <li><strong>/citation</strong> - Afficher des citations inspirantes et motivantes.</li>
+          <li><strong>/citationcélèbre</strong> - Partager des citations célèbres de personnalités influentes.</li>
+          <li><strong>/faitamusant</strong> - Découvrir des faits amusants et surprenants.</li>
+          <li><strong>/horoscope</strong> - Recevoir des prédictions astrologiques quotidiennes.</li>
+          <li><strong>/blague</strong> - Lancer une blague aléatoire pour amuser les membres.</li>
+          <li><strong>/calcamour [nom1] [nom2]</strong> - Calculer la compatibilité amoureuse entre deux personnes.</li>
+          <li><strong>/pierre-feuille-ciseaux</strong> - Jouer à Pierre-Feuille-Ciseaux.</li>
+          <li><strong>/pokémons</strong> - Afficher des informations et images de Pokémon aléatoires.</li>
+          <li><strong>/poker</strong> - Participer à des parties de Poker.</li>
+          <li><strong>/chat [message]</strong> - Le bot répète les messages que vous lui envoyez.</li>
+          <li><strong>/chataléatoire</strong> - Afficher des images de chats aléatoires.</li>
+          <li><strong>/chienaléatoire</strong> - Afficher des images de chiens aléatoires.</li>
+          <li><strong>/recette</strong> - Afficher des recettes de cuisine aléatoires.</li>
+          <li><strong>/jeuxdedé</strong> - Lancer des dés virtuels pour vos jeux.</li>
+          <li><strong>/brink</strong> - Donner des recettes de boissons.</li>
+        </ul>
+
+        <!-- Commandes de Test -->
+        <h2 class="subtitle">Commandes de Test (<span id="test-commands-count">0</span>)</h2>
+        <ul id="test-commands-list">
+          <li><strong>/ping</strong> - Vérifier la réactivité et la vitesse de connexion du bot.</li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Commandes Section End -->
+
+<script>
+  function updateCommandCounts() {
+    // Get command lists
+    const modCommands = document.querySelectorAll('#mod-commands-list li').length;
+    const utilCommands = document.querySelectorAll('#util-commands-list li').length;
+    const musicCommands = document.querySelectorAll('#music-commands-list li').length;
+    const divCommands = document.querySelectorAll('#div-commands-list li').length;
+    const testCommands = document.querySelectorAll('#test-commands-list li').length;
+
+    // Calculate total commands
+    const totalCommands = modCommands + utilCommands + musicCommands + divCommands + testCommands;
+
+    // Update the counts in the HTML
+    document.getElementById('mod-commands-count').textContent = modCommands;
+    document.getElementById('util-commands-count').textContent = utilCommands;
+    document.getElementById('music-commands-count').textContent = musicCommands;
+    document.getElementById('div-commands-count').textContent = divCommands;
+    document.getElementById('test-commands-count').textContent = testCommands;
+    document.getElementById('total-commands').textContent = totalCommands;
+  }
+
+  // Call the function to update counts
+  updateCommandCounts();
+</script>
+
 
   <!-- Stats Section Start -->
   <section id="stats" class="section mt-6">
@@ -259,7 +369,7 @@
       </div>
 
       <div class="column has-text-centered">
-        <p class="title has-text-weight-bold lined">7</p>
+        <p class="title has-text-weight-bold lined">+30</p>
         <span class="subtitle has-text-weight-bold blurple"><i class="fa-solid fa-terminal"></i> Commandes</span>
       </div>
 
